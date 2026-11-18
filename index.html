@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#3368A0">
+<meta name="description" content="Supatchaya Noolek | Biotechnology Research Portfolio and Research Highlights">
+<title>Supatchaya Noolek | Research Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mitr:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --blue:#3368A0; --sky:#66A3BF; --mint:#C8DFDB; --cream:#F2EFE7;
+  --ink:#23394C; --muted:#647786; --line:#DCE5E4; --white:#fff;
+  --pale-blue:#EDF3F8; --pale-mint:#EFF5F2; --radius:20px;
+  --shadow:0 12px 32px rgba(36,75,108,.08); --content:1080px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:86px}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:'Mitr',Tahoma,sans-serif;font-weight:300;font-size:15px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--sky);outline-offset:3px}
+.wrap{width:min(var(--content),calc(100% - 40px));margin-inline:auto}
+.skip{position:absolute;left:-999px;top:8px;background:white;color:var(--blue);padding:8px 12px;border-radius:8px;z-index:100}
+.skip:focus{left:12px}
+.progress{height:3px;position:fixed;z-index:99;inset:0 0 auto;background:transparent}
+.progress span{height:100%;width:0;display:block;background:var(--sky)}
+header{position:sticky;top:0;z-index:50;background:rgba(242,239,231,.94);backdrop-filter:blur(12px);border-bottom:1px solid rgba(51,104,160,.12)}
+.nav{min-height:70px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--blue);font-weight:500}
+.brand-mark{width:38px;height:38px;display:grid;place-items:center;border-radius:13px;background:var(--blue);color:white;font:500 16px Georgia,serif}
+.brand-name{font-size:14px;line-height:1.25}
+.brand-name small{display:block;color:var(--muted);font:400 9px 'Mitr',sans-serif;letter-spacing:.13em;margin-top:3px}
+.links{display:flex;align-items:center;gap:21px}
+.links a{font-size:12px;color:#536B7D;font-weight:400;padding:7px 0;border-bottom:2px solid transparent}
+.links a:hover,.links a.active{color:var(--blue);border-color:var(--sky)}
+.menu{display:none;width:42px;height:42px;border:1px solid var(--line);border-radius:12px;background:white;color:var(--blue);font-size:20px}
+.hero{padding:68px 0 56px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:420px;height:420px;border-radius:50%;background:var(--mint);opacity:.4;right:-195px;top:-245px}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.7fr);align-items:center;gap:48px;position:relative;z-index:1}
+.eyebrow,.section-no{font-size:10px;color:#4C89A8;letter-spacing:.14em;font-weight:500;text-transform:uppercase}
+.eyebrow{display:flex;align-items:center;gap:9px}
+.eyebrow:before{content:"";width:24px;height:2px;background:var(--sky)}
+h1{font-size:clamp(40px,5vw,62px);line-height:1.12;letter-spacing:-.035em;color:var(--blue);font-weight:500;margin:13px 0 8px}
+.hero-role{font-size:16px;color:#4F6B80;font-weight:400;margin:0 0 18px}
+.hero-points{padding:0;margin:0;list-style:none;display:grid;gap:8px}
+.hero-points li{display:flex;gap:10px;align-items:flex-start;color:#425D70;font-size:14px;line-height:1.65}
+.hero-points li:before{content:"✦";color:var(--sky);font-size:13px;flex:0 0 15px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:43px;padding:9px 17px;border-radius:999px;font-size:12px;font-weight:500;border:1px solid var(--blue);transition:.2s}
+.btn.primary{background:var(--blue);color:white}.btn.ghost{color:var(--blue);background:transparent}
+.btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.art-wrap{min-height:285px;display:grid;place-items:center;position:relative}
+.orbit{width:260px;height:260px;border:1px dashed rgba(51,104,160,.38);border-radius:50%;position:absolute}
+.orbit:before,.orbit:after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--sky)}
+.orbit:before{top:28px;left:37px}.orbit:after{right:30px;bottom:38px;background:var(--blue)}
+.microbe-card{position:relative;width:min(100%,280px);background:white;border:1px solid rgba(51,104,160,.13);border-radius:24px;padding:18px 18px 16px;text-align:center;box-shadow:var(--shadow)}
+.microbe-card svg{width:100%;height:150px;display:block}
+.microbe-card b{display:block;color:var(--blue);font-size:14px;font-weight:500}
+.microbe-card span{display:block;color:var(--muted);font-size:11px;margin-top:2px}
+main section{padding:58px 0}
+.tint{background:rgba(200,223,219,.34)}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:22px;margin-bottom:23px}
+.section-title{font-size:clamp(24px,3vw,32px);color:var(--blue);font-weight:500;line-height:1.35;margin:3px 0 0}
+.section-intro{max-width:380px;color:var(--muted);font-size:12px;line-height:1.7;margin:0}
+.section-icon{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:10px;background:var(--pale-mint);color:var(--blue);font-size:14px;margin-right:7px;vertical-align:2px}
+.about-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:14px}
+.card{background:white;border:1px solid rgba(51,104,160,.09);border-radius:var(--radius);padding:23px;box-shadow:0 6px 23px rgba(36,75,108,.04)}
+.bullet-list{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.bullet-list li{position:relative;padding-left:20px;font-size:13px;line-height:1.7;color:#4C6476}
+.bullet-list li:before{content:"✓";position:absolute;left:0;color:#5592A9;font-weight:500}
+.bullet-list b{font-weight:500;color:var(--blue)}
+.facts{display:grid;gap:13px}
+.fact{display:grid;grid-template-columns:36px 1fr;gap:10px;align-items:center}
+.fact-icon{width:36px;height:36px;border-radius:12px;background:var(--pale-mint);display:grid;place-items:center;color:var(--blue);font-size:15px}
+.fact b{display:block;color:var(--blue);font-size:12px;font-weight:500}
+.fact span{display:block;color:var(--muted);font-size:11px;line-height:1.55;overflow-wrap:anywhere}
+.grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:13px}
+.focus-card{background:white;border:1px solid var(--line);border-radius:17px;padding:18px;min-height:145px;transition:.2s}
+.focus-card:hover{transform:translateY(-3px);box-shadow:var(--shadow);border-color:var(--sky)}
+.focus-symbol{width:32px;height:32px;background:var(--pale-mint);border-radius:11px;display:grid;place-items:center;color:var(--blue);font-size:16px;margin-bottom:10px}
+.focus-card h3{font-size:14px;line-height:1.5;color:var(--blue);font-weight:500;margin:0 0 5px}
+.focus-card p{font-size:11px;line-height:1.65;color:var(--muted);margin:0}
+.more-line{font-size:12px;color:var(--muted);margin:14px 0 0}
+.more-line b{color:var(--blue);font-weight:500}
+.experience-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.experience-card{padding:21px;background:white;border:1px solid var(--line);border-radius:17px}
+.exp-date{font-size:10px;letter-spacing:.1em;color:#4C89A8;font-weight:500}
+.experience-card h3{font-size:15px;color:var(--blue);font-weight:500;line-height:1.55;margin:5px 0 3px}
+.exp-lab{font-size:11px;color:var(--muted);margin-bottom:11px}
+.exp-points{margin:0;padding-left:17px;color:#536B7D;font-size:12px;line-height:1.8}
+.exp-points li{padding-left:2px}
+.skill-strip{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.skill-strip span{background:var(--pale-blue);color:#466B88;border:1px solid #DCE7EF;border-radius:99px;padding:5px 10px;font-size:10px}
+.filter-row{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px}
+.filter{border:1px solid #C8D8E1;background:transparent;color:#4F6B80;border-radius:99px;padding:7px 13px;font-size:11px;cursor:pointer}
+.filter[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:white}
+.project-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.project{display:grid;grid-template-columns:55px 1fr;gap:12px;padding:17px;background:white;border:1px solid var(--line);border-radius:16px}
+.project[hidden]{display:none}
+.year{min-height:48px;border-radius:12px;background:var(--pale-mint);display:grid;place-items:center;color:var(--blue);font-size:11px;font-weight:500;text-align:center}
+.project h3{font-size:13px;line-height:1.55;color:var(--blue);font-weight:500;margin:0 0 4px}
+.project p{font-size:10px;line-height:1.55;color:var(--muted);margin:0}
+.result{display:inline-block;margin-top:7px;padding:3px 8px;border-radius:99px;background:var(--pale-blue);color:#466B88;font-size:10px}
+.extra-projects{margin-top:12px}
+.extra-projects summary{font-size:11px;color:var(--blue);font-weight:500;cursor:pointer;list-style:none;display:inline-flex;gap:8px;align-items:center}
+.extra-projects summary:after{content:"＋";font-size:15px}
+.extra-projects[open] summary:after{content:"−"}
+.extra-projects p{color:var(--muted);font-size:11px;margin:7px 0 0}
+.roadmap{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.phase{background:white;border:1px solid var(--line);border-radius:17px;overflow:hidden}
+.phase-band{height:4px;background:var(--sky)}.phase:nth-child(2) .phase-band{background:var(--blue)}.phase:nth-child(3) .phase-band{background:#9BBDB5}
+.phase-body{padding:17px}
+.phase-number{font-size:9px;color:#4C89A8;letter-spacing:.12em;font-weight:500}
+.phase h3{font-size:16px;color:var(--blue);font-weight:500;margin:5px 0}
+.phase p{font-size:11px;color:var(--muted);line-height:1.65;margin:0 0 10px}
+.phase details{border-top:1px solid var(--line);padding-top:9px}
+.phase summary{font-size:11px;color:var(--blue);font-weight:500;cursor:pointer;list-style:none;display:flex;justify-content:space-between}
+.phase summary:after{content:"＋";font-size:14px}.phase details[open] summary:after{content:"−"}
+.phase ul{margin:8px 0 0;padding-left:16px;color:var(--muted);font-size:10px;line-height:1.8}
+.contact{background:var(--mint);border-radius:22px;padding:27px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.contact h2{font-size:25px;color:var(--blue);font-weight:500;margin:4px 0}
+.contact p{font-size:12px;color:#4D6677;margin:0}
+.contact-actions{display:flex;flex-wrap:wrap;gap:8px}
+.contact-actions a,.contact-actions button{border:0;border-radius:99px;background:var(--blue);color:white;padding:9px 14px;font-size:11px;font-weight:500;cursor:pointer}
+.contact-actions .light{background:white;color:var(--blue);border:1px solid rgba(51,104,160,.14)}
+footer{padding:22px 0 30px;color:#7A8993;text-align:center;font-size:10px}
+.back-top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border:0;border-radius:50%;background:var(--blue);color:white;font-size:18px;box-shadow:var(--shadow);cursor:pointer;opacity:0;pointer-events:none;transition:.2s;z-index:40}
+.back-top.show{opacity:1;pointer-events:auto}
+.toast{position:fixed;left:50%;bottom:20px;transform:translate(-50%,12px);opacity:0;pointer-events:none;background:var(--ink);color:white;border-radius:99px;padding:8px 15px;font-size:11px;transition:.2s;z-index:80}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:860px){
+ .links{gap:12px}.links a{font-size:11px}
+ .hero-grid{gap:22px}.grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .about-grid{grid-template-columns:1fr 1fr}
+ .roadmap{grid-template-columns:1fr 1fr}
+}
+@media(max-width:680px){
+ .wrap{width:min(var(--content),calc(100% - 30px))}
+ .nav{min-height:64px}.menu{display:block}
+ .links{display:none;position:absolute;left:0;right:0;top:64px;padding:12px 20px 17px;background:var(--cream);border-bottom:1px solid var(--line);box-shadow:0 12px 22px rgba(35,57,76,.08);flex-direction:column;align-items:stretch;gap:1px}
+ .links.open{display:flex}.links a{padding:9px 2px;font-size:13px;border:0}
+ .hero{padding:44px 0 35px}.hero-grid{grid-template-columns:1fr;gap:15px}
+ .hero-visual{min-height:235px}.orbit{width:215px;height:215px}.microbe-card{max-width:245px;padding:13px}.microbe-card svg{height:125px}
+ main section{padding:43px 0}
+ .section-head{display:block;margin-bottom:18px}.section-intro{margin-top:7px;max-width:100%}
+ .about-grid,.experience-grid{grid-template-columns:1fr}
+ .roadmap{grid-template-columns:1fr}
+ .project-grid{grid-template-columns:1fr}
+ .contact{align-items:flex-start;flex-direction:column;padding:22px}
+}
+@media(max-width:430px){
+ body{font-size:14px}
+ .wrap{width:calc(100% - 26px)}
+ h1{font-size:42px}
+ .hero-role{font-size:14px}
+ .hero-points li{font-size:12px}
+ .grid-3{grid-template-columns:1fr}
+ .focus-card{min-height:0;padding:16px}
+ .card{padding:18px}
+ .project{grid-template-columns:48px 1fr;padding:14px;gap:10px}
+ .year{min-height:44px;font-size:10px}
+ .contact h2{font-size:22px}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}}
+
+/* V6 interaction layer */
+@keyframes orbitTurn{to{transform:rotate(360deg)}}
+@keyframes microbeFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+@keyframes softPulse{0%,100%{opacity:.55;transform:scale(.9)}50%{opacity:1;transform:scale(1.16)}}
+.orbit{animation:orbitTurn 64s linear infinite}
+.microbe-card{animation:microbeFloat 6s ease-in-out infinite}
+.microbe-card svg circle:nth-of-type(2){transform-box:fill-box;transform-origin:center;animation:softPulse 4s ease-in-out infinite}
+.focus-card{width:100%;text-align:left;color:inherit;font-family:inherit;cursor:pointer;position:relative;overflow:hidden}
+.focus-card:after{content:"↗";position:absolute;right:15px;top:14px;color:#78A7B8;font-size:14px;opacity:0;transform:translate(-4px,4px);transition:.2s}
+.focus-card:hover:after,.focus-card:focus-visible:after{opacity:1;transform:translate(0,0)}
+.focus-card[aria-pressed="true"]{border-color:var(--blue);background:#F8FBFD;box-shadow:0 0 0 2px rgba(51,104,160,.10),var(--shadow)}
+.focus-card[aria-pressed="true"] .focus-symbol{background:var(--blue);color:white}
+.focus-hint{font-size:10px;color:var(--muted);margin:-8px 0 12px;display:flex;align-items:center;gap:7px}
+.focus-hint:before{content:"☝";font-size:13px;color:var(--sky)}
+.focus-detail{display:grid;grid-template-columns:42px 1fr;gap:13px;align-items:start;background:white;border:1px solid #D6E4E7;border-left:4px solid var(--sky);border-radius:15px;padding:15px 17px;margin-top:13px;min-height:91px;transition:opacity .2s,transform .2s}
+.focus-detail.changed{animation:detailIn .25s ease}
+@keyframes detailIn{from{opacity:.45;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}
+.focus-detail-icon{width:38px;height:38px;border-radius:13px;display:grid;place-items:center;background:var(--pale-mint);color:var(--blue);font-size:17px}
+.focus-detail h4{font-size:13px;color:var(--blue);font-weight:500;margin:0 0 3px}
+.focus-detail p{font-size:11px;color:var(--muted);line-height:1.7;margin:0}
+.focus-tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:7px}
+.focus-tags span{font-size:9px;padding:3px 8px;border-radius:99px;background:var(--pale-blue);color:#4C6C86}
+.interactive-label{display:inline-flex;align-items:center;gap:6px;font-size:10px;color:#527B91;background:#F1F6F6;border:1px solid #D9E8E6;border-radius:99px;padding:4px 9px}
+.interactive-label:before{content:"✦";color:var(--sky)}
+.project{transition:transform .2s,border-color .2s,box-shadow .2s}
+.project:hover{transform:translateY(-2px);border-color:#BBD2D9;box-shadow:0 8px 22px rgba(36,75,108,.07)}
+.project h3:before{content:"✧";color:var(--sky);font-size:11px;margin-right:6px}
+.exp-points{list-style:none;padding-left:0}
+.exp-points li{position:relative;padding-left:17px}
+.exp-points li:before{content:"↳";position:absolute;left:0;color:var(--sky);font-weight:500}
+.fact-icon{transition:transform .2s,background .2s}
+.fact:hover .fact-icon{transform:rotate(-7deg) scale(1.06);background:#DDECE8}
+.skill-strip span{transition:transform .18s,background .18s}
+.skill-strip span:hover{transform:translateY(-2px);background:#DDEAF2}
+.phase{transition:transform .2s,box-shadow .2s}
+.phase:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.phase summary{display:flex;align-items:center;gap:8px}
+.phase summary:before{content:"⌄";color:var(--sky);font-size:14px}
+.phase details[open] summary:before{content:"⌃"}
+.contact-actions a:before{content:"✉";margin-right:6px}
+.contact-actions a[href^="tel"]:before{content:"☎"}
+.contact-actions button:before{content:"▣";margin-right:6px}
+.btn{position:relative;overflow:hidden}
+.btn:active,.filter:active,.contact-actions button:active{transform:scale(.97)}
+.filter{transition:background .18s,color .18s,transform .18s}
+.filter:hover{transform:translateY(-1px);border-color:var(--blue)}
+.back-top{display:grid;place-items:center}
+.toast:before{content:"✓";color:#A9D4C9;margin-right:7px}
+@media(max-width:680px){
+ .focus-hint{margin-top:-4px}
+ .focus-detail{grid-template-columns:34px 1fr;padding:13px;gap:10px}
+ .focus-detail-icon{width:32px;height:32px}
+}
+@media(prefers-reduced-motion:reduce){
+ .orbit,.microbe-card,.microbe-card svg circle:nth-of-type(2){animation:none!important}
+}
+
+
+
+/* V7: readable typography, responsive spacing, and signature highlight cards */
+:root{--content:1120px}
+body{font-size:17px;line-height:1.78}
+.wrap{width:min(var(--content),calc(100% - 48px))}
+.nav{min-height:76px}
+.brand-name{font-size:15px}
+.brand-name small{font-size:11px}
+.links{gap:20px}
+.links a{font-size:14px}
+.eyebrow,.section-no{font-size:12px;letter-spacing:.12em}
+.hero{padding:76px 0 64px}
+.hero-role{font-size:19px;line-height:1.65}
+.hero-points{gap:10px}
+.hero-points li{font-size:16px;line-height:1.75}
+.btn{font-size:14px;min-height:47px;padding:10px 19px}
+main section{padding:68px 0}
+.section-title{font-size:clamp(29px,3.1vw,38px);line-height:1.35}
+.section-intro{font-size:15px;line-height:1.8;max-width:430px}
+.section-icon{width:34px;height:34px;font-size:17px}
+.card{padding:26px}
+.bullet-list{gap:13px}
+.bullet-list li{font-size:15px;line-height:1.8}
+.fact{grid-template-columns:42px 1fr;gap:12px}
+.fact-icon{width:42px;height:42px;font-size:17px}
+.fact b{font-size:15px}
+.fact span{font-size:13px;line-height:1.65}
+.focus-card{padding:21px;min-height:160px}
+.focus-symbol{width:38px;height:38px;font-size:19px;margin-bottom:12px}
+.focus-card h3{font-size:18px;line-height:1.5}
+.focus-card p{font-size:14px;line-height:1.75}
+.focus-hint{font-size:13px;margin-top:-4px}
+.focus-detail{grid-template-columns:48px 1fr;padding:18px 20px;min-height:104px}
+.focus-detail-icon{width:44px;height:44px;font-size:19px}
+.focus-detail h4{font-size:17px}
+.focus-detail p{font-size:14px;line-height:1.8}
+.focus-tags span{font-size:12px;padding:4px 10px}
+.experience-grid{gap:16px}
+.experience-card{padding:24px}
+.exp-date{font-size:12px}
+.experience-card h3{font-size:18px;line-height:1.55}
+.exp-lab{font-size:14px}
+.exp-points{font-size:14px;line-height:1.9}
+.skill-strip{gap:9px}
+.skill-strip span{font-size:13px;padding:6px 11px}
+.filter-row{gap:9px}
+.interactive-label{font-size:12px;padding:5px 10px}
+.filter{font-size:13px;padding:8px 15px}
+.project-grid{gap:15px}
+.project{grid-template-columns:62px 1fr;gap:15px;padding:20px}
+.year{font-size:14px;min-height:56px}
+.project h3{font-size:16px;line-height:1.65}
+.project p{font-size:14px;line-height:1.7}
+.result{font-size:12px;padding:4px 10px}
+.extra-projects summary{font-size:14px}
+.extra-projects p{font-size:13px}
+.roadmap{gap:15px}
+.phase-body{padding:21px}
+.phase-number{font-size:11px}
+.phase h3{font-size:19px}
+.phase p{font-size:14px;line-height:1.8}
+.phase summary{font-size:14px}
+.phase ul{font-size:13px;line-height:1.9}
+.contact{padding:32px}
+.contact h2{font-size:30px}
+.contact p{font-size:15px;line-height:1.8}
+.contact-actions a,.contact-actions button{font-size:13px;padding:11px 16px}
+footer{font-size:12px}
+.toast{font-size:13px}
+
+.signature-section{position:relative;overflow:hidden;background:linear-gradient(180deg,rgba(237,243,248,.55),rgba(242,239,231,.25))}
+.signature-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.signature-card{position:relative;isolation:isolate;overflow:hidden;min-height:315px;background:white;border:1px solid rgba(51,104,160,.16);border-radius:24px;padding:28px 30px 25px;box-shadow:var(--shadow)}
+.signature-card:before{content:"";position:absolute;z-index:-1;width:210px;height:210px;border:1px solid rgba(102,163,191,.22);border-radius:50%;right:-85px;top:-100px;box-shadow:0 0 0 18px rgba(200,223,219,.12),0 0 0 38px rgba(200,223,219,.08)}
+.signature-topline{display:flex;align-items:center;gap:12px;margin-bottom:19px}
+.signature-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:16px;background:var(--pale-mint);color:var(--blue);font-size:25px;flex:0 0 48px}
+.signature-kicker{font-size:12px;letter-spacing:.1em;color:#5986A0;font-weight:500}
+.signature-card h3{position:relative;color:var(--blue);font-size:25px;font-weight:500;line-height:1.4;margin:0 0 5px;max-width:90%}
+.signature-subtitle{position:relative;color:#5A7B91;font-size:16px;font-weight:400;margin:0 0 15px}
+.signature-description{position:relative;color:#4E6577;font-size:15px;line-height:1.85;max-width:95%;margin:0 0 17px}
+.signature-description strong{color:var(--blue);font-weight:500}
+.signature-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.signature-tags span{background:var(--pale-blue);border:1px solid #DDE8EF;border-radius:99px;padding:5px 11px;font-size:12px;color:#466B88}
+.signature-details{position:relative;border-top:1px solid var(--line);padding-top:12px;margin-top:auto}
+.signature-details summary{display:flex;align-items:center;justify-content:space-between;gap:10px;cursor:pointer;list-style:none;color:var(--blue);font-size:14px;font-weight:500}
+.signature-details summary::-webkit-details-marker{display:none}
+.signature-details summary:after{content:"＋";font-size:18px;color:var(--sky)}
+.signature-details[open] summary:after{content:"−"}
+.signature-details ul{margin:10px 0 0;padding-left:20px;color:var(--muted);font-size:13px;line-height:1.85}
+.signature-details p{margin:10px 0 0;color:var(--muted);font-size:13px;line-height:1.85}
+.signature-orbit{position:absolute;right:20px;bottom:20px;width:44px;height:44px;border:1px dashed rgba(102,163,191,.45);border-radius:50%;pointer-events:none}
+.signature-orbit:before,.signature-orbit:after{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:var(--sky)}
+.signature-orbit:before{top:2px;left:7px}.signature-orbit:after{right:1px;bottom:9px;background:var(--blue)}
+.mobility-card{border-top:5px solid var(--sky)}
+.ngen-card{border-top:5px solid var(--blue)}
+.signature-card:hover{transform:translateY(-3px);box-shadow:0 16px 36px rgba(36,75,108,.11);transition:transform .2s,box-shadow .2s}
+
+@media(max-width:860px){
+ .wrap{width:min(var(--content),calc(100% - 38px))}
+ .links{gap:12px}.links a{font-size:12px}
+ .signature-card{padding:24px;min-height:330px}
+ .signature-card h3{font-size:22px}
+}
+@media(max-width:680px){
+ body{font-size:16px;line-height:1.75}
+ .wrap{width:calc(100% - 32px)}
+ .nav{min-height:66px}
+ .brand-name{font-size:14px}.brand-name small{font-size:10px}
+ .links{top:66px}
+ .links a{font-size:14px;padding:11px 2px}
+ .hero{padding:48px 0 40px}
+ .hero-role{font-size:17px}
+ .hero-points li{font-size:15px}
+ main section{padding:50px 0}
+ .section-head{margin-bottom:20px}
+ .section-title{font-size:29px}
+ .section-intro{font-size:14px;line-height:1.75}
+ .about-grid,.experience-grid,.signature-grid{grid-template-columns:1fr}
+ .card{padding:21px}
+ .bullet-list li{font-size:15px}
+ .fact b{font-size:15px}.fact span{font-size:13px}
+ .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .focus-card{padding:17px;min-height:145px}
+ .focus-card h3{font-size:17px}.focus-card p{font-size:14px}
+ .focus-detail p{font-size:14px}
+ .experience-card h3{font-size:17px}
+ .exp-points{font-size:14px}
+ .skill-strip span{font-size:12px}
+ .project-grid{grid-template-columns:1fr}
+ .project h3{font-size:15px}.project p{font-size:13px}
+ .roadmap{grid-template-columns:1fr}
+ .phase p{font-size:14px}.phase ul{font-size:13px}
+ .signature-card{min-height:0;padding:24px 22px}
+ .signature-card h3{font-size:23px;max-width:100%}
+ .signature-description{font-size:15px;max-width:100%}
+ .signature-subtitle{font-size:15px}
+ .signature-details summary{font-size:14px}
+ .contact{padding:24px}
+ .contact h2{font-size:27px}
+ .contact p{font-size:14px}
+}
+@media(max-width:430px){
+ body{font-size:15.5px}
+ .wrap{width:calc(100% - 28px)}
+ h1{font-size:42px}
+ .hero-role{font-size:16px}
+ .hero-points li{font-size:14px}
+ .section-title{font-size:27px}
+ .section-no{font-size:11px}
+ .grid-3{grid-template-columns:1fr}
+ .focus-card{min-height:0}
+ .focus-card h3{font-size:17px}
+ .focus-card p{font-size:14px}
+ .project{grid-template-columns:50px 1fr;padding:16px;gap:11px}
+ .year{min-height:48px;font-size:12px}
+ .contact h2{font-size:25px}
+ .signature-card{padding:21px 18px;border-radius:20px}
+ .signature-icon{width:43px;height:43px;flex-basis:43px;font-size:22px}
+ .signature-kicker{font-size:11px}
+ .signature-card h3{font-size:21px}
+ .signature-description{font-size:14px;line-height:1.8}
+ .signature-tags span{font-size:11px}
+ .signature-details ul,.signature-details p{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){.signature-card:hover{transform:none}}
+
+</style>
+</head>
+<body>
+<a class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
+<div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home" aria-label="Supatchaya Noolek">
+      <span class="brand-mark">SN</span>
+      <span class="brand-name">SUPATCHAYA NOOLEK<small>RESEARCH PORTFOLIO</small></span>
+    </a>
+    <button class="menu" id="menuBtn" aria-label="เปิดเมนู" aria-expanded="false">☰</button>
+    <nav class="links" id="navLinks" aria-label="เมนูหลัก">
+      <a href="#about">เกี่ยวกับฉัน</a><a href="#highlights">ไฮไลต์</a><a href="#focus">ความสนใจ</a><a href="#experience">ประสบการณ์</a><a href="#projects">ผลงาน</a><a href="#roadmap">เป้าหมาย</a><a href="#contact">ติดต่อ</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero" id="home">
+ <div class="wrap hero-grid">
+  <div>
+   <div class="eyebrow">BIOTECHNOLOGY · MAHIDOL UNIVERSITY</div>
+   <h1>Supatchaya<br>Noolek<span style="color:var(--sky)">.</span></h1>
+   <p class="hero-role">นักศึกษาเทคโนโลยีชีวภาพ | ผู้สนใจวิจัยจุลชีววิทยาระดับโมเลกุล</p>
+   <ul class="hero-points">
+    <li>Actinomycetes และ Rare Actinomycetes</li>
+    <li>Gene Regulation และ Secondary Metabolite Biosynthesis</li>
+    <li>Cryptic BGC Activation และ Omics approaches</li>
+   </ul>
+   <div class="actions"><a class="btn primary" href="#focus">ดูความสนใจวิจัย ↓</a><a class="btn ghost" href="#contact">ติดต่อ</a></div>
+  </div>
+  <div class="hero-visual">
+   <div class="orbit" aria-hidden="true"></div>
+   <div class="microbe-card">
+    <svg viewBox="0 0 260 150" role="img" aria-label="ภาพประกอบจุลินทรีย์">
+     <circle cx="130" cy="75" r="66" fill="#EFF5F2"/>
+     <circle cx="130" cy="75" r="55" fill="none" stroke="#C8DFDB" stroke-width="2" stroke-dasharray="3 6"/>
+     <g transform="translate(130 75) rotate(-25)">
+      <rect x="-52" y="-15" width="104" height="30" rx="15" fill="#66A3BF" stroke="#3368A0" stroke-width="2"/>
+      <path d="M-35 -7 Q-12 0 10 -8 T38 -6" fill="none" stroke="#F2EFE7" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="-28" cy="7" r="3" fill="#F2EFE7"/><circle cx="8" cy="6" r="3" fill="#F2EFE7"/><circle cx="34" cy="5" r="3" fill="#F2EFE7"/>
+      <path d="M-50 0 Q-70 -15 -76 -28 M-50 7 Q-72 18 -78 29 M50 -3 Q70 -18 77 -27 M50 8 Q69 18 77 30" fill="none" stroke="#3368A0" stroke-width="2" stroke-linecap="round"/>
+     </g>
+     <g fill="#3368A0"><circle cx="76" cy="40" r="5"/><circle cx="190" cy="51" r="4"/><circle cx="194" cy="112" r="6"/></g>
+     <g fill="#C8DFDB" stroke="#66A3BF" stroke-width="1.4"><circle cx="100" cy="22" r="4"/><circle cx="167" cy="24" r="6"/><circle cx="62" cy="97" r="4"/></g>
+    </svg>
+    <b>Microbes · Molecules · Discovery</b>
+    <span>Curiosity begins at the microbial level</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="about">
+ <div class="wrap">
+  <div class="section-head"><div><div class="section-no">01 / PROFILE</div><h2 class="section-title"><span class="section-icon">◎</span>เกี่ยวกับฉัน</h2></div><p class="section-intro">ข้อมูลสำคัญและทิศทางความสนใจในภาพรวม</p></div>
+  <div class="about-grid">
+   <div class="card">
+    <ul class="bullet-list">
+     <li><b>กำลังศึกษา:</b> เทคโนโลยีชีวภาพ คณะวิทยาศาสตร์ มหาวิทยาลัยมหิดล</li>
+     <li><b>สนใจหลัก:</b> Actinomycetes, Molecular Biology และ Microbial Genetics</li>
+     <li><b>ประเด็นที่อยากศึกษา:</b> กลไกควบคุมการสร้างสารเมแทบอไลต์ทุติยภูมิ</li>
+     <li><b>การประยุกต์:</b> สารออกฤทธิ์ทางชีวภาพ สารต้านจุลชีพ และการเกษตร</li>
+    </ul>
+   </div>
+   <div class="card facts">
+    <div class="fact"><span class="fact-icon">⌂</span><div><b>Mahidol University</b><span>B.Sc. Biotechnology · 2024–ปัจจุบัน</span></div></div>
+    <div class="fact"><span class="fact-icon">◉</span><div><b>GPA 2.84 / 4.00</b><span>ตามข้อมูลใน CV</span></div></div>
+    <div class="fact"><span class="fact-icon">✉</span><div><b>Email</b><span>supatchaya.noo@student.mahidol.edu</span></div></div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="highlights" class="signature-section">
+ <div class="wrap">
+  <div class="section-head">
+   <div><div class="section-no">02 / SIGNATURE HIGHLIGHTS</div><h2 class="section-title"><span class="section-icon">✦</span>ประสบการณ์และผลงานเด่น</h2></div>
+   <p class="section-intro">สองประสบการณ์สำคัญที่อยากนำเสนอเป็นพิเศษในเส้นทางด้าน Biotechnology และ Innovation</p>
+  </div>
+  <div class="signature-grid">
+   <article class="signature-card mobility-card">
+    <div class="signature-topline"><span class="signature-icon" aria-hidden="true">✈</span><span class="signature-kicker">INTERNATIONAL EXPERIENCE · 2026</span></div>
+    <h3>SDGs + Mobility MaPs 2026</h3>
+    <p class="signature-subtitle">Malaysia · 19–23 July 2026</p>
+    <p class="signature-description">นำโครงการ <strong>KombuBag</strong> ซึ่งต่อยอดจาก bacterial cellulose ของ Kombucha เข้าสู่ประสบการณ์การเรียนรู้และแลกเปลี่ยนด้านนวัตกรรมในบริบทนานาชาติ</p>
+    <div class="signature-tags"><span>KombuBag</span><span>SDGs</span><span>International Mobility</span></div>
+    <details class="signature-details">
+     <summary>ดูรายละเอียดเพิ่มเติม</summary>
+     <ul>
+      <li>มุ่งเชื่อมโยง Biotechnology กับการใช้ประโยชน์จากวัสดุชีวภาพและแนวคิดความยั่งยืน</li>
+      <li>เครือข่ายสถาบันที่เกี่ยวข้อง: UM, UPM, CEBAR และ UMSDC</li>
+      <li>ช่วงกิจกรรม: 19–23 กรกฎาคม 2026</li>
+     </ul>
+    </details>
+    <span class="signature-orbit" aria-hidden="true"></span>
+   </article>
+   <article class="signature-card ngen-card">
+    <div class="signature-topline"><span class="signature-icon" aria-hidden="true">✧</span><span class="signature-kicker">INVENTION & INNOVATION</span></div>
+    <h3>Thailand New Gen Inventors Award</h3>
+    <p class="signature-subtitle">I-New Gen Award</p>
+    <p class="signature-description">อีกหนึ่งเวทีสำคัญในประสบการณ์ด้านการประดิษฐ์และนวัตกรรม ที่สะท้อนความสนใจในการนำองค์ความรู้ทางวิทยาศาสตร์ไปพัฒนาเป็นผลงานที่จับต้องได้</p>
+    <div class="signature-tags"><span>Innovation</span><span>Young Inventors</span><span>Applied Science</span></div>
+    <details class="signature-details">
+     <summary>ดูรายละเอียดเพิ่มเติม</summary>
+     <p>นำเสนอชื่อเวทีตามข้อมูลใน CV โดยไม่ระบุระดับรางวัลหรือผลการแข่งขันเพิ่มเติม</p>
+    </details>
+    <span class="signature-orbit" aria-hidden="true"></span>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="tint" id="focus">
+ <div class="wrap">
+  <div class="section-head"><div><div class="section-no">02 / RESEARCH INTERESTS</div><h2 class="section-title"><span class="section-icon">⌬</span>ความสนใจวิจัย</h2></div><p class="section-intro">4 แกนหลักที่เชื่อมโยงกันในเส้นทางการวิจัย</p></div>
+  <div class="grid-3">
+   <button class="focus-card" type="button" data-focus="actino" aria-pressed="true"><span class="focus-symbol">✣</span><h3>Actinomycetes</h3><p>สำรวจ Rare Actinomycetes และแหล่งสิ่งแวดล้อมใหม่</p></button>
+   <button class="focus-card" type="button" data-focus="regulation" aria-pressed="false"><span class="focus-symbol">⌘</span><h3>Gene Regulation</h3><p>ศึกษาการควบคุมยีนที่เกี่ยวข้องกับ Secondary Metabolites</p></button>
+   <button class="focus-card" type="button" data-focus="bgc" aria-pressed="false"><span class="focus-symbol">⌬</span><h3>BGC Activation</h3><p>ค้นหาและศึกษาการกระตุ้น cryptic หรือ silent BGCs</p></button>
+   <button class="focus-card" type="button" data-focus="omics" aria-pressed="false"><span class="focus-symbol">▦</span><h3>Omics & Bioinformatics</h3><p>ใช้ข้อมูล Genomics, Transcriptomics และ Metabolomics</p></button>
+   <button class="focus-card" type="button" data-focus="bioactive" aria-pressed="false"><span class="focus-symbol">⚗</span><h3>Bioactive Compounds</h3><p>สำรวจสารต้านจุลชีพและสารเพื่อการเกษตร</p></button>
+   <button class="focus-card" type="button" data-focus="future" aria-pressed="false"><span class="focus-symbol">✧</span><h3>Future interests</h3><p>Strain Improvement, Synthetic Biology และ Metabolic Engineering</p></button>
+  </div>
+  <p class="focus-hint">กดเลือกการ์ดเพื่อดูรายละเอียดของแต่ละหัวข้อที่สนใจ</p>
+  <div class="focus-detail" id="focusDetail" aria-live="polite">
+   <div class="focus-detail-icon" id="focusDetailIcon">✣</div>
+   <div><h4 id="focusDetailTitle">Actinomycetes</h4><p id="focusDetailText">สนใจศึกษาความหลากหลายของ Actinomycetes โดยเฉพาะกลุ่ม Rare Actinomycetes และการค้นหาจุลินทรีย์จากแหล่งสิ่งแวดล้อมที่ยังมีการศึกษาน้อย</p><div class="focus-tags" id="focusDetailTags"><span>Rare Actinomycetes</span><span>Environmental sources</span></div></div>
+  </div>
+ </div>
+</section>
+
+<section id="experience">
+ <div class="wrap">
+  <div class="section-head"><div><div class="section-no">04 / RESEARCH EXPERIENCE</div><h2 class="section-title"><span class="section-icon">⚗</span>ประสบการณ์วิจัย</h2></div><p class="section-intro">Summer Research Trainee · Department of Biotechnology, Mahidol University</p></div>
+  <div class="experience-grid">
+   <article class="experience-card">
+    <div class="exp-date">JUNE 2025</div>
+    <h3>Laboratory of Asst. Prof. Bungonsiri Intra</h3>
+    <div class="exp-lab">Summer Research Trainee</div>
+    <ul class="exp-points"><li>แยกและคัดกรอง Actinomycetes จากน้ำเสีย</li><li>ศึกษาศักยภาพการย่อยสลายพลาสติก</li></ul>
+   </article>
+   <article class="experience-card">
+    <div class="exp-date">JULY 2025</div>
+    <h3>Laboratory of Assoc. Prof. Choowong Auesukaree</h3>
+    <div class="exp-lab">Summer Research Trainee</div>
+    <ul class="exp-points"><li>ศึกษาสายพันธุ์ thermotolerant yeast</li><li>เรียนรู้การประยุกต์ใช้ใน bioreactor</li></ul>
+   </article>
+  </div>
+  <div class="skill-strip" aria-label="ทักษะห้องปฏิบัติการ"><span>Streak plate</span><span>Pour plate</span><span>Media preparation</span><span>DNA extraction</span><span>PCR</span><span>Biology Teaching Assistant · 2025</span></div>
+ </div>
+</section>
+
+<section class="tint" id="projects">
+ <div class="wrap">
+  <div class="section-head"><div><div class="section-no">05 / SELECTED WORK</div><h2 class="section-title"><span class="section-icon">✧</span>ผลงานที่เลือก</h2></div><p class="section-intro">คัดเฉพาะโครงงานและรางวัลเด่น พร้อมตัวกรองตามช่วงการศึกษา</p></div>
+  <div class="filter-row" role="group" aria-label="กรองผลงาน"><span class="interactive-label">เลือกดูตามช่วงการศึกษา</span>
+   <button class="filter" data-filter="all" aria-pressed="true">ทั้งหมด</button>
+   <button class="filter" data-filter="uni" aria-pressed="false">มหาวิทยาลัย</button>
+   <button class="filter" data-filter="school" aria-pressed="false">มัธยมศึกษา</button>
+  </div>
+  <div class="project-grid" id="projectGrid">
+   <article class="project" data-category="uni"><div class="year">2026</div><div><h3>Bioactive Cellulose Acetate Fibers for Burn Wound Healing</h3><p>KMUTNB Innovation Awards · จาก Kombucha Bacterial Cellulose</p><span class="result">เข้าร่วมการแข่งขัน</span></div></article>
+   <article class="project" data-category="uni"><div class="year">2025</div><div><h3>Kombucha-derived Bioplastic Film</h3><p>KMUTNB Innovation Awards</p><span class="result">เข้ารอบชิงชนะเลิศ</span></div></article>
+   <article class="project" data-category="uni"><div class="year">2025</div><div><h3>Chromogenic Hair Dyes</h3><p>Thai SynBio Challenge</p><span class="result">เข้าร่วมการแข่งขัน</span></div></article>
+   <article class="project" data-category="school"><div class="year">2024</div><div><h3>Kombucha-based Bio-materials</h3><p>Young Scientist Competition (YSC)</p><span class="result">Finalist · Honorary Award · 12,000 บาท</span></div></article>
+   <article class="project" data-category="school"><div class="year">2023</div><div><h3>Kombucha Cellulose Film & Natural Polymers</h3><p>STEAMs Co-Creation Project · Agriculture and Food</p><span class="result">Finalist · Best Poster · 3,000 บาท</span></div></article>
+   <article class="project" data-category="school"><div class="year">2024</div><div><h3>Kombucha Bioplastic Film</h3><p>Green Innovation Contest</p><span class="result">Finalist · 5,000 บาท</span></div></article>
+  </div>
+  <div id="filterStatus" class="more-line" aria-live="polite">แสดงผลงาน 6 รายการ</div>
+  <details class="extra-projects"><summary>กิจกรรมทางวิชาการอื่น ๆ</summary><p>Thai Science Camp 14</p></details>
+ </div>
+</section>
+
+<section id="roadmap">
+ <div class="wrap">
+  <div class="section-head"><div><div class="section-no">06 / NEXT STEPS</div><h2 class="section-title"><span class="section-icon">⌁</span>เป้าหมายการพัฒนา</h2></div><p class="section-intro">เส้นทางที่วางไว้แบบยืดหยุ่น ปรับได้ตามประสบการณ์วิจัย</p></div>
+  <div class="roadmap">
+   <article class="phase"><div class="phase-band"></div><div class="phase-body"><div class="phase-number">PHASE 01</div><h3>ปริญญาตรี</h3><p>สร้างพื้นฐานและทักษะปฏิบัติการด้าน Molecular Microbiology</p><details><summary>หัวข้อที่กำลังพัฒนา</summary><ul><li>Microbial Genetics และ Gene Regulation</li><li>DNA manipulation และ Gene expression</li><li>พื้นฐาน Genome mining / antiSMASH</li></ul></details></div></article>
+   <article class="phase"><div class="phase-band"></div><div class="phase-body"><div class="phase-number">PHASE 02</div><h3>ปริญญาโท</h3><p>ต่อยอดสู่ Molecular Microbiology และ Omics-based Research</p><details><summary>แนวทางที่สนใจ</summary><ul><li>Biotechnology / Microbiology</li><li>Molecular Biotechnology</li><li>Microbial Biotechnology</li><li>Bioinformatics and Systems Biology</li></ul></details></div></article>
+   <article class="phase"><div class="phase-band"></div><div class="phase-body"><div class="phase-number">PHASE 03</div><h3>หลังปริญญาโท</h3><p>เลือกเส้นทางจากความสนใจและประสบการณ์จริง</p><details><summary>เส้นทางที่เปิดไว้</summary><ul><li>Molecular Microbiology</li><li>Microbial Genomics / Systems Biology</li><li>Synthetic Biology / Strain Improvement</li><li>Research career หรือ Ph.D.</li></ul></details></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="tint" id="contact">
+ <div class="wrap">
+  <div class="contact">
+   <div><div class="section-no">LET'S CONNECT</div><h2>ติดต่อและพูดคุย</h2><p>สำหรับโอกาสทำวิจัย การฝึกประสบการณ์ หรือการติดต่อทางวิชาการ</p></div>
+   <div class="contact-actions"><a aria-label="ส่งอีเมล" href="mailto:supatchaya.noo@student.mahidol.edu">ส่งอีเมล ↗</a><a class="light" href="tel:+66806312091">โทรศัพท์</a><button class="light" id="copyEmail" type="button">คัดลอกอีเมล</button></div>
+  </div>
+ </div>
+</section>
+</main>
+<footer><div class="wrap">© 2026 Supatchaya Noolek · Research Portfolio</div></footer>
+<button class="back-top" id="backTop" type="button" aria-label="กลับไปด้านบน">↑</button>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>{
+ const open=navLinks.classList.toggle('open');
+ menuBtn.setAttribute('aria-expanded',String(open));
+ menuBtn.setAttribute('aria-label',open?'ปิดเมนู':'เปิดเมนู');
+ menuBtn.textContent=open?'×':'☰';
+});
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+ navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');
+ menuBtn.setAttribute('aria-label','เปิดเมนู');menuBtn.textContent='☰';
+}));
+
+const focusContent={
+ actino:{icon:'✣',title:'Actinomycetes',text:'สนใจศึกษาความหลากหลายของ Actinomycetes โดยเฉพาะกลุ่ม Rare Actinomycetes และการค้นหาจุลินทรีย์จากแหล่งสิ่งแวดล้อมที่ยังมีการศึกษาน้อย',tags:['Rare Actinomycetes','Environmental sources']},
+ regulation:{icon:'⌘',title:'Gene Regulation',text:'ต้องการทำความเข้าใจกลไกและ regulatory genes ที่มีบทบาทต่อการควบคุมการแสดงออกของยีนและการสร้างสารเมแทบอไลต์ทุติยภูมิ',tags:['Regulatory genes','Gene expression']},
+ bgc:{icon:'⌬',title:'BGC Activation',text:'สนใจการค้นหา Biosynthetic Gene Clusters และแนวทางศึกษาการกระตุ้นกลุ่มยีนที่อาจยังไม่แสดงออกภายใต้สภาวะการเพาะเลี้ยงทั่วไป',tags:['Biosynthetic Gene Clusters','Cryptic BGCs']},
+ omics:{icon:'▦',title:'Omics & Bioinformatics',text:'ต้องการใช้ข้อมูล Genomics, Transcriptomics และ Metabolomics เพื่อเชื่อมโยงข้อมูลระดับยีน การแสดงออก และสารเมแทบอไลต์ของจุลินทรีย์',tags:['Genomics','Transcriptomics','Metabolomics']},
+ bioactive:{icon:'⚗',title:'Bioactive Compounds',text:'สนใจศักยภาพของสารออกฤทธิ์ทางชีวภาพจากจุลินทรีย์ โดยเฉพาะสารต้านจุลชีพและสารที่อาจประยุกต์ใช้ทางการเกษตร',tags:['Antimicrobial discovery','Agricultural applications']},
+ future:{icon:'✧',title:'Future interests',text:'เปิดโอกาสเรียนรู้การพัฒนาสายพันธุ์จุลินทรีย์และการออกแบบระบบชีวภาพเพิ่มเติม โดยพิจารณาจากหัวข้อวิจัยและทรัพยากรของห้องปฏิบัติการ',tags:['Strain Improvement','Synthetic Biology','Metabolic Engineering']}
+};
+const focusButtons=[...document.querySelectorAll('.focus-card[data-focus]')];
+const focusDetail=document.getElementById('focusDetail');
+focusButtons.forEach(button=>button.addEventListener('click',()=>{
+ const item=focusContent[button.dataset.focus];
+ if(!item)return;
+ focusButtons.forEach(card=>card.setAttribute('aria-pressed',String(card===button)));
+ document.getElementById('focusDetailIcon').textContent=item.icon;
+ document.getElementById('focusDetailTitle').textContent=item.title;
+ document.getElementById('focusDetailText').textContent=item.text;
+ const tagBox=document.getElementById('focusDetailTags');
+ tagBox.replaceChildren(...item.tags.map(tag=>{const span=document.createElement('span');span.textContent=tag;return span;}));
+ focusDetail.classList.remove('changed');
+ requestAnimationFrame(()=>focusDetail.classList.add('changed'));
+}));
+
+const filterButtons=[...document.querySelectorAll('.filter')];
+const projects=[...document.querySelectorAll('.project')];
+const status=document.getElementById('filterStatus');
+filterButtons.forEach(btn=>btn.addEventListener('click',()=>{
+ const filter=btn.dataset.filter;let count=0;
+ filterButtons.forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));
+ projects.forEach(card=>{
+  const show=filter==='all'||card.dataset.category===filter;
+  card.hidden=!show;if(show)count++;
+ });
+ const label=filter==='all'?'ทั้งหมด':filter==='uni'?'ระดับมหาวิทยาลัย':'ระดับมัธยมศึกษา';
+ status.textContent=`แสดงผลงาน${label} ${count} รายการ`;
+}));
+const progress=document.getElementById('progressBar');
+const backTop=document.getElementById('backTop');
+function scrollUI(){
+ const max=document.documentElement.scrollHeight-window.innerHeight;
+ progress.style.width=(max>0?window.scrollY/max*100:0)+'%';
+ backTop.classList.toggle('show',window.scrollY>450);
+}
+window.addEventListener('scroll',scrollUI,{passive:true});scrollUI();
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+const anchors=[...document.querySelectorAll('.links a')];
+if('IntersectionObserver' in window){
+ const io=new IntersectionObserver(entries=>entries.forEach(e=>{
+  if(e.isIntersecting)anchors.forEach(a=>a.classList.toggle('active',a.hash==='#'+e.target.id));
+ }),{rootMargin:'-35% 0px -55% 0px'});
+ document.querySelectorAll('main section[id]').forEach(s=>io.observe(s));
+}
+const toast=document.getElementById('toast');let toastTimer;
+function notify(msg){toast.textContent=msg;toast.classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>toast.classList.remove('show'),2200);}
+document.getElementById('copyEmail').addEventListener('click',async()=>{
+ const email='supatchaya.noo@student.mahidol.edu';
+ try{await navigator.clipboard.writeText(email);notify('คัดลอกอีเมลแล้ว');}
+ catch(e){notify(email);}
+});
+</script>
+</body>
+</html>
